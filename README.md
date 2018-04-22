@@ -1,17 +1,26 @@
-# Unruly
+# Darker
 
 ### Introduction
-Unruly est un thème conçu pour le CMS [MineWeb](https://github.com/MineWeb/MineWebCMS). Il est désormais gratuit et disponible pour tous et vous pouvez participer à son évolution.
+Darker est un thème conçu pour le CMS [MineWeb](https://github.com/MineWeb/MineWebCMS). Il est désormais gratuit et disponible pour tous et vous pouvez participer à son évolution.
 
-![Demo du thème](https://i.imgur.com/mdB5ZCh.png)
+![Demo du thème](https://i.imgur.com/W6Fo6bC.png)
 
 ### Fonctionnalités du thème
 
 - Adapté à tous les écrans (Ordinateurs, tablettes, smartphones, ...)
 - Couleurs personnalisables
 - Beaucoup de contenu modifiable
-- 3 Vitrines sur l'accueil pour décrire votre serveur visuellement
-- Une épée trop cool sur la bannière, et quand tu cliques dessus bah ça change l'épée !
+- Thème sombre
+
+Cependant ce thème n'est pas compatible avec tous les plugins, voici les plugins supportés : 
+
+- Shop
+- Support
+- Vote
+- Forum
+- ChangeLog
+
+Pour tous les autres il peut subvenir des problèmes de compatibilité.
 
 
 ### Comment modifier mon thème
@@ -22,7 +31,7 @@ Amusez-vous.
 
 ### Pourquoi devient-il gratuit ?
 
-Avant ce jour ce thème était payant et il est désormais gratuit et il participera ainsi à l'essor de MineWeb dans le monde de l'Open-Source.
+Avant ce jour ce thème était payant, il est désormais gratuit et il participera ainsi à l'essor de MineWeb dans le monde de l'Open-Source.
 
 ### J'ai acheté ce thème quand il était payant, maintenant qu'il est gratuit je peux être remboursé ?
 
@@ -36,8 +45,7 @@ ___
 
 Pour installer ce thème vous devez :
 - Télécharger le .zip (Bouton vert avec l'instruction "Clone or download" en haut à droite)
-- Déplacer le dossier télécharger "**Theme-Unruly**" dans : ```app\View\Themed\```
-- Renommer le dossier "**Theme-Unruly**" en "**Unruly**"
+- Déplacer le dossier télécharger "**Theme-Darker**" dans : ```app\View\Themed\```
 - Activer le thème depuis le Panel Administrateur (Autres > Thèmes)
 
 
