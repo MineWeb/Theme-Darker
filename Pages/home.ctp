@@ -30,7 +30,7 @@
         <?php $i++; } ?>
         <?php } else { ?>
         <div class="item active">
-            <img src="<?= $this->Html->url('/') ?>theme/Darker/img/slider-default.png" alt="slide_1">
+            <img src="<?= $this->Html->url('/') ?>theme/Theme-Darker/img/slider-default.png" alt="slide_1">
             <div class="carousel-caption theme-color-border wow bounceIn">
                 <h3>Bienvenue sur <span class="theme-color-text"><?php echo $website_name ?></span></h3>
                 <p>Vous pouvez modifier cette emplacement depuis le Panel Administrateur dans l'onglet Général puis Slider. Le bouton ci-dessous est modifiable depuis l'onglet Autres > Thèmes > Personnalisation</p>
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="item">
-            <img src="<?= $this->Html->url('/') ?>theme/Darker/img/slider-default.png" alt="slide_1">
+            <img src="<?= $this->Html->url('/') ?>theme/Theme-Darker/img/slider-default.png" alt="slide_1">
             <div class="carousel-caption theme-color-border wow bounceIn">
                 <h3>Bienvenue sur <span class="theme-color-text"><?php echo $website_name ?></span></h3>
                 <p>Vous pouvez modifier cette emplacement depuis le Panel Administrateur dans l'onglet Général puis Slider. Le bouton ci-dessous est modifiable depuis l'onglet Autres > Thèmes > Personnalisation</p>
@@ -103,8 +103,8 @@
                             <img src="<?php echo $theme_config['vote_img']; ?>">
                         </div>
                         <?php } else { ?>
-                        <img class="coffre" src="<?= $this->Html->url('/') ?>theme/Darker/img/coffre.png" alt="coffre">
-                        <img class="diamant" src="<?= $this->Html->url('/') ?>theme/Darker/img/diamant.png">
+                        <img class="coffre" src="<?= $this->Html->url('/') ?>theme/Theme-Darker/img/coffre.png" alt="coffre">
+                        <img class="diamant" src="<?= $this->Html->url('/') ?>theme/Theme-Darker/img/diamant.png">
                         <?php } ?>
                         <p>
                             <?php echo $theme_config['vote_texte']; ?>
