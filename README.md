@@ -45,7 +45,8 @@ ___
 
 Pour installer ce thème vous devez :
 - Télécharger le .zip (Bouton vert avec l'instruction "Clone or download" en haut à droite)
-- Déplacer le dossier télécharger "**Theme-Darker**" dans : ```app\View\Themed\```
+- Renommer le dossier "**Theme-Darker-master**" par "**Darker**"
+- Déplacer le dossier télécharger "**Darker**" dans : ```app\View\Themed\```
 - Activer le thème depuis le Panel Administrateur (Autres > Thèmes)
 
 
