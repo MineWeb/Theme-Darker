@@ -39,10 +39,10 @@
     },
     "supported": {
         "cms": "^1.4.2",
-        "eywek.shop.1": "^1.2.0",
-        "eywek.support.2": "^1.0.9",
-        "eywek.vote.3": "^2.0.5",
-        "phpierre.forum.48": "^1.1.10",
-        "kenshimdev.changelog.54": "^1.1.0"
+        "eywek.shop": "^1.2.0",
+        "eywek.support": "^1.0.9",
+        "eywek.vote": "^2.0.5",
+        "phpierre.forum": "^1.1.10",
+        "kenshimdev.changelog": "^1.1.0"
     }
 }
