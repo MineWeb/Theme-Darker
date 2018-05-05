@@ -56,10 +56,10 @@
                   echo '<h5 class="text-uppercase">'.$comment['author'].'</h5>';
                   echo '</div>';
                   echo '<div class="col-sm-9 col-md-10">';
-                    echo '<p style="min-height:115px;">'.before_display($comment['content']).'</p>';
+                  echo '<p style="min-height:115px;    padding-right: 30px;">'.before_display($comment['content']).'</p>';
                   echo '<p class="posted pull-right"><i class="fa fa-clock-o"></i> '.$Lang->date($comment['created']).'</p>';
                     if($Permissions->can('DELETE_COMMENT') OR $Permissions->can('DELETE_HIS_COMMENT') AND $user['pseudo'] == $v['author']) {
-                      echo '<p class="reply"><a id="'.$comment['id'].'" class="text-danger comment-delete" href="#"><i class="fa fa-times"></i> '.$Lang->get('GLOBAL__DELETE').'</a></p>';
+                        echo '<p class="delete"><a id="'.$comment['id'].'" class="btn btn-danger" href="#" title="' .$Lang->get('GLOBAL__DELETE') .'"><i class="fa fa-trash"></i></a></p>';
                     }
                   echo '</div>';
                 echo '</div>';

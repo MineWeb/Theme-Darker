@@ -624,6 +624,12 @@ ul.nav li.dropdown ul.dropdown-menu {
     margin-bottom: 30px;
 }
 
+.comment .delete{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 #comment-form{
     background: #262626;
     padding: 10px 25px 50px 25px;
