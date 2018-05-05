@@ -603,7 +603,6 @@ ul.nav li.dropdown ul.dropdown-menu {
     border-color: rgb(38, 38, 38);
     background-color: #262626;
     padding: 10px 10px;
-    transition: 0.3s;
     cursor: default;
     margin-bottom: 20px;
     color: #fff;
@@ -624,7 +623,7 @@ ul.nav li.dropdown ul.dropdown-menu {
     margin-bottom: 30px;
 }
 
-.comment .delete{
+.comment .comment-delete{
     position: absolute;
     top: 0;
     right: 0;
