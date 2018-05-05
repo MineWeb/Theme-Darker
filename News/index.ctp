@@ -56,10 +56,10 @@
                   echo '<h5 class="text-uppercase">'.$comment['author'].'</h5>';
                   echo '</div>';
                   echo '<div class="col-sm-9 col-md-10">';
-                    echo '<p style="min-height:115px;">'.before_display($comment['content']).'</p>';
+                  echo '<p style="min-height:115px;    padding-right: 30px;">'.before_display($comment['content']).'</p>';
                   echo '<p class="posted pull-right"><i class="fa fa-clock-o"></i> '.$Lang->date($comment['created']).'</p>';
                     if($Permissions->can('DELETE_COMMENT') OR $Permissions->can('DELETE_HIS_COMMENT') AND $user['pseudo'] == $v['author']) {
-                      echo '<p class="reply"><a id="'.$comment['id'].'" class="text-danger comment-delete" href="#"><i class="fa fa-times"></i> '.$Lang->get('GLOBAL__DELETE').'</a></p>';
+                        echo '<a id="'.$comment['id'].'" class="comment-delete btn btn-danger" title="' .$Lang->get('GLOBAL__DELETE') .'"><i class="fa fa-trash"></i></a>';
                     }
                   echo '</div>';
                 echo '</div>';
@@ -114,40 +114,39 @@
 
 </div>
 <script>
-    function addcomment(data) {
-        var d = new Date();
-        var comment = '';
-        comment += '<div class="row comment">';
-          comment += '<div class="col-sm-3 col-md-2 text-center-xs">';
-            comment += '<p>';
-              comment += '<img src="<?= $this->Html->url(array('controller' => 'API', 'action' => 'get_head_skin', $user['pseudo'], '150')) ?>" class="img-responsive img-circle" alt="">';
-            comment += '</p>';
-          comment += '</div>';
-          comment += '<div class="col-sm-9 col-md-10">';
-            comment += '<h5 class="text-uppercase"><?= $user['pseudo'] ?></h5>';
-            comment += '<p class="posted"><i class="fa fa-clock-o"></i> '+d.getHours()+'h'+d.getMinutes()+'</p>';
-            comment += '<p>'+data['content']+'</p>';
-          comment += '</div>';
-        comment += '</div>';
-        $('.add-comment').hide().html(comment).fadeIn(1500);
-        $('#form-comment-fade-out').slideUp(1500);
-    }
-     $(".comment-delete").click(function(e) {
-       e.preventDefault();
+    $(".comment-delete").click(function() {
         comment_delete(this);
     });
-
     function comment_delete(e) {
         var inputs = {};
         var id = $(e).attr("id");
         inputs["id"] = id;
         inputs["data[_Token][key]"] = '<?= $csrfToken ?>';
         $.post("<?= $this->Html->url(array('controller' => 'news', 'action' => 'ajax_comment_delete')) ?>", inputs, function(data) {
-          if(data == 'true') {
-            $('#comment-'+id).slideUp(500);
-          } else {
-            console.log(data);
-          }
+            if (data == 'true') {
+                $('#comment-' + id).fadeOut(500);
+            } else {
+                console.log(data);
+            }
         });
+    }
+    
+    function addcomment(data) {
+        var d = new Date();
+        var comment = '';
+        comment += '<div class="row comment"  style="margin-right: 0px;margin-left: 0px;">';
+          comment += '<div class="col-sm-3 col-md-2 text-center-xs">';
+            comment += '<p>';
+              comment += '<img src="<?= $this->Html->url(array('controller' => 'API', 'action' => 'get_head_skin', $user['pseudo'], '150')) ?>" class="img-responsive img-rounded" alt="">';
+            comment += '</p>';
+            comment += '<h5 class="text-uppercase"><?= $user['pseudo'] ?></h5>';
+          comment += '</div>';
+          comment += '<div class="col-sm-9 col-md-10">';
+        comment +='<p style="min-height:115px;padding-right: 30px;">' + data['content'] + '</p>';
+            comment += '<p class="posted pull-right"><i class="fa fa-clock-o"></i> '+d.getHours()+'h'+d.getMinutes()+'</p>';
+          comment += '</div>';
+        comment += '</div>';
+        $('.add-comment').hide().html(comment).fadeIn(500);
+        $('.alert-info').fadeOut(500);
     }
 </script>
